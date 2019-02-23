@@ -1,0 +1,6 @@
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Domain\bin\Debug\LocalChat.Domain.dll
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Domain\bin\Debug\LocalChat.Domain.pdb
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Domain\obj\Debug\LocalChat.Domain.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Domain\obj\Debug\LocalChat.Domain.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Domain\obj\Debug\LocalChat.Domain.dll
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Domain\obj\Debug\LocalChat.Domain.pdb

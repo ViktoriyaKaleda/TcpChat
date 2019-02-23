@@ -1,0 +1,10 @@
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Server.Console\bin\Debug\LocalChat.Server.Console.exe.config
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Server.Console\bin\Debug\LocalChat.Server.Console.exe
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Server.Console\bin\Debug\LocalChat.Server.Console.pdb
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Server.Console\obj\Debug\LocalChat.Server.Console.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Server.Console\obj\Debug\LocalChat.Server.Console.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Server.Console\obj\Debug\LocalChat.Server.Console.csproj.CopyComplete
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Server.Console\obj\Debug\LocalChat.Server.Console.exe
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Server.Console\obj\Debug\LocalChat.Server.Console.pdb
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Server.Console\bin\Debug\LocalChat.Domain.dll
+C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Server.Console\bin\Debug\LocalChat.Domain.pdb
