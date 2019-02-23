@@ -7,13 +7,30 @@ namespace LocalChat.Client.Console
     {
         static void Main(string[] args)
         {
-            new LocalChatConsoleManager().StartChating();
+            string userInput;
+            while(true)
+            {
+                System.Console.WriteLine("Press '1' to start a chatbot and '2' to start a normal chat: ");
+                userInput = System.Console.ReadLine();
+                if (userInput != "1" || userInput != "2")
+                    System.Console.WriteLine("Invalid input. Try again, please.");
+                else
+                    break;
+            }          
 
-            //var chatbot = new Chatbot();
-            //chatbot.SubscribeOnMessageReceiveEvent(new System.EventHandler<MessageReceiveEventArgs>(PrintReceivedMessageToConsole));
-            //chatbot.ChtatbotInternalMessageSend += PrintChatbotMessageToConsole;
-            //chatbot.Start();
-            //System.Console.ReadLine();
+            if (userInput == "1")
+            {
+                var chatbot = new Chatbot();
+                chatbot.SubscribeOnMessageReceiveEvent(new System.EventHandler<MessageReceiveEventArgs>(PrintReceivedMessageToConsole));
+                chatbot.ChtatbotInternalMessageSend += PrintChatbotMessageToConsole;
+                chatbot.Start();
+                System.Console.ReadLine();
+            }
+
+            else
+            {
+                new LocalChatConsoleManager().StartChating();
+            }                      
         }
 
         private static void PrintReceivedMessageToConsole(object sender, MessageReceiveEventArgs messageReceiveEventArgs)

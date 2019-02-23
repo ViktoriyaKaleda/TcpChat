@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace LocalChat.Client.Console
 {
+    /// <summary>
+    /// Represents a console chat manager which gives a full chat functionality.
+    /// </summary>
     public class LocalChatConsoleManager
     {
         private List<Message> Messages { get; }
@@ -15,6 +18,9 @@ namespace LocalChat.Client.Console
 
         private string _userInput;
 
+        /// <summary>
+        /// Initialize a new instance of <see cref="LocalChatConsoleManager"/>.
+        /// </summary>
         public LocalChatConsoleManager()
         {
             Messages = new List<Message>();            
@@ -24,6 +30,9 @@ namespace LocalChat.Client.Console
             _chatClient.MessageReceive += PrintReceivedMessageToConsole;
         }
 
+        /// <summary>
+        /// Logins new user and starts chat cycle of receiving and reading from the console and sending messages.
+        /// </summary>
         public void StartChating()
         {
             string username;
