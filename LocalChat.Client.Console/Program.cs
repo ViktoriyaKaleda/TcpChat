@@ -7,13 +7,13 @@ namespace LocalChat.Client.Console
     {
         static void Main(string[] args)
         {
-            //new LocalChatConsoleManager().StartChating();
+            new LocalChatConsoleManager().StartChating();
 
-            var chatbot = new Chatbot();
-            chatbot.SubscribeOnMessageReceiveEvent(new System.EventHandler<MessageReceiveEventArgs>(PrintReceivedMessageToConsole));
-            chatbot.ChtatbotInternalMessageSend += PrintChatbotMessageToConsole;
-            chatbot.Start();
-            System.Console.ReadLine();
+            //var chatbot = new Chatbot();
+            //chatbot.SubscribeOnMessageReceiveEvent(new System.EventHandler<MessageReceiveEventArgs>(PrintReceivedMessageToConsole));
+            //chatbot.ChtatbotInternalMessageSend += PrintChatbotMessageToConsole;
+            //chatbot.Start();
+            //System.Console.ReadLine();
         }
 
         private static void PrintReceivedMessageToConsole(object sender, MessageReceiveEventArgs messageReceiveEventArgs)

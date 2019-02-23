@@ -3,6 +3,7 @@ using LocalChat.Domain.Client;
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace LocalChat.Client.Console
 {
@@ -10,7 +11,7 @@ namespace LocalChat.Client.Console
     {
         private List<Message> Messages { get; }
 
-        private readonly ChatClient _localChat;
+        private readonly ChatClient _chatClient;
 
         private string _userInput;
 
@@ -18,9 +19,9 @@ namespace LocalChat.Client.Console
         {
             Messages = new List<Message>();            
 
-            _localChat = new ChatClient("127.0.0.1", 8005);            
+            _chatClient = new ChatClient("127.0.0.1", 8005);            
 
-            _localChat.MessageReceive += PrintReceivedMessageToConsole;
+            _chatClient.MessageReceive += PrintReceivedMessageToConsole;
         }
 
         public void StartChating()
@@ -31,12 +32,17 @@ namespace LocalChat.Client.Console
                 System.Console.Write("Enter your username, please:");
                 username = System.Console.ReadLine();
             }
-            while (_localChat.TrySetUsername(username) != true);
+            while (_chatClient.TrySetUsername(username) != true);
 
             System.Console.WriteLine($"You logged in as '{username}'.");
 
-            Thread clientThread = new Thread(new ThreadStart(_localChat.Process));
-            clientThread.Start();
+            // The first homework task: implement the client and server using the “For each client - own processing thread” scheme for the server
+            //Thread clientThread = new Thread(new ThreadStart(_chatClient.Process));
+            //clientThread.Start();
+
+            // The second task: using Task Parallel Library 
+            Task.Run(() => _chatClient.Process());
+
             ShowMessageInput();
         }
 
@@ -44,7 +50,7 @@ namespace LocalChat.Client.Console
         {
             ConsoleKeyInfo e;
 
-            while (_localChat.IsActive)
+            while (_chatClient.IsActive)
             {
                 e = System.Console.ReadKey();
 
@@ -56,7 +62,7 @@ namespace LocalChat.Client.Console
                         continue;
                     }
 
-                    _localChat.SendMessage(_userInput);
+                    _chatClient.SendMessage(_userInput);
 
                     _userInput = "";
                 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace LocalChat.Domain.Chatbot
 {
@@ -95,8 +96,12 @@ namespace LocalChat.Domain.Chatbot
 
             ChtatbotInternalMessageSend?.Invoke(this, $"You logged in as '{username}'.");
 
-            Thread clientThread = new Thread(new ThreadStart(_chatClient.Process));
-            clientThread.Start();
+            // The first homework task: implement the client and server using the “For each client - own processing thread” scheme for the server
+            //Thread clientThread = new Thread(new ThreadStart(_chatClient.Process));
+            //clientThread.Start();
+
+            // The second task: using Task Parallel Library 
+            Task.Run(() => _chatClient.Process());
 
             for (int i = 0; i < messagesCount; i++)
             {

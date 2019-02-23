@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Client.Wpf\obj\Debug\
+c:\Users\USER\source\repos\TcpLocalChat\LocalChat.Client.Wpf\obj\Debug\
 LocalChat.Client.Wpf
 none
 false
 DEBUG;TRACE
-C:\Users\USER\source\repos\TcpLocalChat\LocalChat.Client.Wpf\App.xaml
+c:\Users\USER\source\repos\TcpLocalChat\LocalChat.Client.Wpf\App.xaml
 2-1531380679
 
-141962470975
-18-1260471200
+10-245470441
+18-366063037
 Views\LoginDialog.xaml;Views\MainWindow.xaml;
 
-True
+False
 

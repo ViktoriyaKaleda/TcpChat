@@ -2,6 +2,7 @@
 using LocalChat.Domain.Client;
 using LocalChat.Domain.Server;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace LocalChat.Server.Console
 {
@@ -18,8 +19,13 @@ namespace LocalChat.Server.Console
             while (true)
             {
                 ChatClient clientObject = chatServer.AcceptClient();
-                Thread clientThread = new Thread(new ParameterizedThreadStart(chatServer.Process));
-                clientThread.Start(clientObject);
+
+                // The first homework task: implement the client and server using the “For each client - own processing thread” scheme for the server
+                //Thread clientThread = new Thread(new ParameterizedThreadStart(chatServer.Process));
+                //clientThread.Start(clientObject);
+
+                // The second task: using Task Parallel Library 
+                Task.Run(() => chatServer.Process(clientObject));
             }            
         }
 
